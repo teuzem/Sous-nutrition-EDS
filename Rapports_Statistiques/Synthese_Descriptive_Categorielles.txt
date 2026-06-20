@@ -1,0 +1,192 @@
+Repartition Fréquentielle (ordre decroissant) : sexeenfant 
+ Code  Libelle  Effectif  Pourcentage
+    1 Masculin      2253    50.938277
+    2  Féminin      2170    49.061723
+
+Repartition Fréquentielle (ordre decroissant) : milieuderesidence 
+ Code Libelle  Effectif  Pourcentage
+    2   Rural      2412    54.533122
+    1  Urbain      2011    45.466878
+
+Repartition Fréquentielle (ordre decroissant) : niveauinstructionmere 
+ Code    Libelle  Effectif  Pourcentage
+    2 Secondaire      1674    37.847615
+    1   Primaire      1516    34.275379
+    0      Aucun      1009    22.812571
+    3  Supérieur       224     5.064436
+
+Repartition Fréquentielle (ordre decroissant) : indicederichesse 
+ Code     Libelle  Effectif  Pourcentage
+    3       Moyen      1034    23.377798
+    2      Pauvre      1033    23.355189
+    4       Riche       907    20.506444
+    1 Plus pauvre       840    18.991635
+    5  Plus riche       609    13.768935
+
+Repartition Fréquentielle (ordre decroissant) : region 
+ Code                Libelle  Effectif  Pourcentage
+    9                  Ouest       654    14.786344
+    5           Extrême-Nord       625    14.130681
+    2  Centre (sans Yaoundé)       514    11.621072
+    7                   Nord       510    11.530635
+    4                    Est       442     9.993217
+   10                    Sud       400     9.043636
+    1               Adamaoua       350     7.913181
+   12                Yaoundé       331     7.483608
+    6 Littoral (sans Douala)       277     6.262718
+    3                 Douala       242     5.471400
+   11              Sud-Ouest        78     1.763509
+
+Repartition Fréquentielle (ordre decroissant) : vacciné 
+ Code Libelle  Effectif  Pourcentage
+    1     Oui       488    11.033235
+    0     Non       289     6.534027
+
+Repartition Fréquentielle (ordre decroissant) : vaccinbcg 
+ Code                           Libelle  Effectif  Pourcentage
+    1  Date de vaccination sur la carte      1885    42.618132
+    2               Signalé par la mère       443    10.015826
+    0                               Non       403     9.111463
+    3 Vaccination indiquée sur la carte        14     0.316527
+
+Repartition Fréquentielle (ordre decroissant) : diarrhee 
+ Code                    Libelle  Effectif  Pourcentage
+    0            Pas de diarrhée      3878    87.678047
+    2 Oui (2 dernières semaines)       540    12.208908
+
+Repartition Fréquentielle (ordre decroissant) : prisededecisionmere 
+ Code                      Libelle  Effectif  Pourcentage
+    4            Quelqu'un d'autre      1754    39.656342
+    2       Répondante et conjoint      1622    36.671942
+    1             Répondante seule       258     5.833145
+    5 Répondante et autre personne         8     0.180873
+
+Repartition Fréquentielle (ordre decroissant) : statutmatrimonialmere 
+ Code                    Libelle  Effectif  Pourcentage
+    1                     Mariée      2645    59.801040
+    2 Union libre / Cohabitation      1002    22.654307
+    0              Jamais mariée       464    10.490617
+    5                    Séparée       194     4.386163
+    3                      Veuve        76     1.718291
+    4                   Divorcée        42     0.949582
+
+Repartition Fréquentielle (ordre decroissant) : tailleanaissance 
+ Code                   Libelle  Effectif  Pourcentage
+    3                     Moyen      2297    51.933077
+    2  Plus gros que la moyenne       875    19.782953
+    1                 Très gros       513    11.598463
+    4 Plus petit que la moyenne       440     9.947999
+    5                Très petit       196     4.431381
+
+Repartition Fréquentielle (ordre decroissant) : sourceeaupotable 
+ Code                                 Libelle  Effectif  Pourcentage
+   21                     Puits tubé / forage      1309    29.595297
+   32                Puits creusé non protégé       490    11.078454
+   42                     Source non protégée       367     8.297536
+   13            Eau courante: robinet public       335     7.574045
+   12     Eau courante: dans la cour/parcelle       272     6.149672
+   31                    Puits creusé protégé       220     4.974000
+   41                         Source protégée       208     4.702690
+   11          Eau courante: dans le logement       197     4.453991
+   71    Eau de surface (rivière/barrage/lac)        25     0.565227
+   51                            Eau de pluie        25     0.565227
+   62 Boutique / Charette avec petite citerne        17     0.384355
+   61                          Camion-citerne         5     0.113045
+   92               Eau en sachet (Pure Wata)         4     0.090436
+
+Repartition Fréquentielle (ordre decroissant) : typeinstallationssanitaires 
+ Code                                     Libelle  Effectif  Pourcentage
+   22                 Latrines à fosse avec dalle      1771    40.040696
+   23 Latrines à fosse sans dalle / fosse ouverte      1646    37.214560
+   12                Chasse d'eau: fosse septique       315     7.121863
+   31                      Toilettes à compostage       243     5.494009
+   13              Chasse d'eau: latrines à fosse        59     1.333936
+   21 Latrines à fosse améliorées ventilées (VIP)        34     0.768709
+   11           Chasse d'eau: branchée à un égout        25     0.565227
+   41          Toilettes suspendues / sur pilotis        15     0.339136
+   14       Chasse d'eau: vers un endroit inconnu         9     0.203482
+
+Repartition Fréquentielle (ordre decroissant) : typecombustiblecuisine 
+ Code                                    Libelle  Effectif  Pourcentage
+    8                            Bouse d'animaux      3241    73.276057
+    2 Gaz de pétrole liquéfié (GPL) / Gaz butane       621    14.040244
+    7               Cultures / Déchets agricoles       128     2.893963
+    5                            Bois de chauffe        80     1.808727
+    1                                Électricité        18     0.406964
+    6                  Paille / Arbustes / Herbe        14     0.316527
+    3                 Kérosène / Pétrole lampant         7     0.158264
+    4                            Charbon de bois         5     0.113045
+
+Repartition Fréquentielle (ordre decroissant) : lieuderesidence 
+ Code Libelle  Effectif  Pourcentage
+    2   Rural      2412    54.533122
+    1  Urbain      2011    45.466878
+
+Repartition Fréquentielle (ordre decroissant) : regionecologique 
+ Code      Libelle  Effectif  Pourcentage
+    9          Sud       654    14.786344
+    5     Littoral       625    14.130681
+    2       Centre       514    11.621072
+    7   Nord-Ouest       510    11.530635
+    4 Extrême-Nord       442     9.993217
+   10    Sud-Ouest       400     9.043636
+    1     Adamaoua       350     7.913181
+    6         Nord       277     6.262718
+    3          Est       242     5.471400
+
+Repartition Fréquentielle (ordre decroissant) : vaccinpolio0 
+ Code                           Libelle  Effectif  Pourcentage
+  1.0  Date de vaccination sur la carte      1699    61.849290
+  0.0                               Non       690    25.118311
+  2.0               Signalé par la mère       333    12.122315
+  3.0 Vaccination indiquée sur la carte        18     0.655260
+
+Repartition Fréquentielle (ordre decroissant) : vaccinpolio2 
+ Code                           Libelle  Effectif  Pourcentage
+  1.0  Date de vaccination sur la carte      1571    57.189661
+  0.0                               Non       783    28.503822
+  2.0               Signalé par la mère       374    13.614853
+  3.0 Vaccination indiquée sur la carte        12     0.436840
+
+Repartition Fréquentielle (ordre decroissant) : vaccinpolio3 
+ Code                           Libelle  Effectif  Pourcentage
+  1.0  Date de vaccination sur la carte      1433    52.165999
+  0.0                               Non      1116    40.626138
+  2.0               Signalé par la mère       174     6.334183
+  3.0 Vaccination indiquée sur la carte        17     0.618857
+
+Repartition Fréquentielle (ordre decroissant) : vaccindtp1 
+ Code                           Libelle  Effectif  Pourcentage
+    1  Date de vaccination sur la carte      1735    39.226769
+    0                               Non       577    13.045444
+    2               Signalé par la mère       403     9.111463
+    3 Vaccination indiquée sur la carte        17     0.384355
+
+Repartition Fréquentielle (ordre decroissant) : vaccindtp2 
+ Code                           Libelle  Effectif  Pourcentage
+    1  Date de vaccination sur la carte      1589    35.925842
+    0                               Non       776    17.544653
+    2               Signalé par la mère       358     8.094054
+    3 Vaccination indiquée sur la carte         9     0.203482
+
+Repartition Fréquentielle (ordre decroissant) : vaccindtp3 
+ Code                           Libelle  Effectif  Pourcentage
+    1  Date de vaccination sur la carte      1428    32.285779
+    0                               Non       981    22.179516
+    2               Signalé par la mère       308     6.963599
+    3 Vaccination indiquée sur la carte        15     0.339136
+
+Repartition Fréquentielle (ordre decroissant) : vaccinpolio1 
+ Code                           Libelle  Effectif  Pourcentage
+    1  Date de vaccination sur la carte      1742    39.385033
+    0                               Non       543    12.276735
+    2               Signalé par la mère       440     9.947999
+    3 Vaccination indiquée sur la carte        15     0.339136
+
+Repartition Fréquentielle (ordre decroissant) : vaccinrougeole1 
+ Code                           Libelle  Effectif  Pourcentage
+  0.0                               Non      1378    50.163815
+  1.0  Date de vaccination sur la carte       970    35.311249
+  2.0               Signalé par la mère       355    12.923189
+  3.0 Vaccination indiquée sur la carte        28     1.019294
+

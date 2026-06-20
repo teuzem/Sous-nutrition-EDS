@@ -1,0 +1,10 @@
+Variable,Effectif_Valide,Moyenne,Mediane,Mode,Ecart_Type,Variance,Min,Max,Q25,Q75,IQR,Skewness,Kurtosis,Nom_Test_Normalite,Stat_Test_Normalite,p_value_Normalite,Distribution
+rangdenaissance,4423,3.487,3.0,1.0,2.312,5.344,1.0,14.0,2.0,5.0,3.0,1.063,0.922,Shapiro-Wilk,0.888,6.5464507098579835e-49,Non normale
+hemoglobinemere,4423,162.483,161.2,162.3,36.178,1308.875,108.2,999.6,157.0,165.2,8.2,22.41,516.074,Shapiro-Wilk,0.0929,2.4727867221971893e-90,Non normale
+intervalleintergenesique,4423,35.739,31.0,31.0,19.168,367.415,8.0,183.0,26.0,39.0,13.0,2.708,10.755,Shapiro-Wilk,0.7502,2.866667855430189e-63,Non normale
+dureeallaitement,4423,79.271,100.0,100.0,59.468,3536.423,0.0,223.0,0.0,101.0,101.0,0.092,-0.411,Shapiro-Wilk,0.7672,6.303067656856919e-62,Non normale
+agemere,4423,28.439,28.0,25.0,6.556,42.977,15.0,49.0,23.0,33.0,10.0,0.358,-0.469,Shapiro-Wilk,0.9808,4.6511796826159366e-24,Non normale
+nombreenfantsnesvivants,4423,3.868,3.0,2.0,2.356,5.55,1.0,14.0,2.0,5.0,3.0,0.968,0.739,Shapiro-Wilk,0.911,3.7136526920321074e-45,Non normale
+nombrevisitesprenatales,4423,4.17,4.0,4.0,2.05,4.201,0.0,20.0,4.0,5.0,1.0,0.521,3.794,Shapiro-Wilk,0.8828,1.1086449728678589e-49,Non normale
+nombremembresmenage,4423,8.326,7.0,6.0,4.566,20.852,2.0,37.0,5.0,10.0,5.0,1.872,5.341,Shapiro-Wilk,0.846,2.1954972547950312e-54,Non normale
+ageenfant,4423,28.247,28.0,3.0,17.235,297.043,0.0,59.0,13.0,43.0,30.0,0.071,-1.221,Shapiro-Wilk,0.951,4.1993070781692283e-36,Non normale

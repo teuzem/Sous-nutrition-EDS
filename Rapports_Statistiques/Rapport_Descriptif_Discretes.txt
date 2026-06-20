@@ -1,0 +1,72 @@
+ANALYSE DE LA VARIABLE : RANGDENAISSANCE
+----------------------------------------
+Tendance centrale : Moyenne = 3.49 | Médiane = 3.00 | Mode = 1
+Dispersion : Écart-type = 2.31 | Variance = 5.34 | IQR = 3.00 [Min: 1, Max: 14]
+Forme de la distribution : Skewness = 1.06 | Kurtosis = 0.92
+Test de normalité (Shapiro-Wilk) : Statistique = 0.8880, p-value = 6.5465e-49
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : HEMOGLOBINEMERE
+----------------------------------------
+Tendance centrale : Moyenne = 162.48 | Médiane = 161.20 | Mode = 162.3
+Dispersion : Écart-type = 36.18 | Variance = 1308.87 | IQR = 8.20 [Min: 108.2, Max: 999.6]
+Forme de la distribution : Skewness = 22.41 | Kurtosis = 516.07
+Test de normalité (Shapiro-Wilk) : Statistique = 0.0929, p-value = 2.4728e-90
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : INTERVALLEINTERGENESIQUE
+----------------------------------------
+Tendance centrale : Moyenne = 35.74 | Médiane = 31.00 | Mode = 31
+Dispersion : Écart-type = 19.17 | Variance = 367.41 | IQR = 13.00 [Min: 8, Max: 183]
+Forme de la distribution : Skewness = 2.71 | Kurtosis = 10.75
+Test de normalité (Shapiro-Wilk) : Statistique = 0.7502, p-value = 2.8667e-63
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : DUREEALLAITEMENT
+----------------------------------------
+Tendance centrale : Moyenne = 79.27 | Médiane = 100.00 | Mode = 100
+Dispersion : Écart-type = 59.47 | Variance = 3536.42 | IQR = 101.00 [Min: 0, Max: 223]
+Forme de la distribution : Skewness = 0.09 | Kurtosis = -0.41
+Test de normalité (Shapiro-Wilk) : Statistique = 0.7672, p-value = 6.3031e-62
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : AGEMERE
+----------------------------------------
+Tendance centrale : Moyenne = 28.44 | Médiane = 28.00 | Mode = 25
+Dispersion : Écart-type = 6.56 | Variance = 42.98 | IQR = 10.00 [Min: 15, Max: 49]
+Forme de la distribution : Skewness = 0.36 | Kurtosis = -0.47
+Test de normalité (Shapiro-Wilk) : Statistique = 0.9808, p-value = 4.6512e-24
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : NOMBREENFANTSNESVIVANTS
+----------------------------------------
+Tendance centrale : Moyenne = 3.87 | Médiane = 3.00 | Mode = 2
+Dispersion : Écart-type = 2.36 | Variance = 5.55 | IQR = 3.00 [Min: 1, Max: 14]
+Forme de la distribution : Skewness = 0.97 | Kurtosis = 0.74
+Test de normalité (Shapiro-Wilk) : Statistique = 0.9110, p-value = 3.7137e-45
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : NOMBREVISITESPRENATALES
+----------------------------------------
+Tendance centrale : Moyenne = 4.17 | Médiane = 4.00 | Mode = 4
+Dispersion : Écart-type = 2.05 | Variance = 4.20 | IQR = 1.00 [Min: 0, Max: 20]
+Forme de la distribution : Skewness = 0.52 | Kurtosis = 3.79
+Test de normalité (Shapiro-Wilk) : Statistique = 0.8828, p-value = 1.1086e-49
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : NOMBREMEMBRESMENAGE
+----------------------------------------
+Tendance centrale : Moyenne = 8.33 | Médiane = 7.00 | Mode = 6
+Dispersion : Écart-type = 4.57 | Variance = 20.85 | IQR = 5.00 [Min: 2, Max: 37]
+Forme de la distribution : Skewness = 1.87 | Kurtosis = 5.34
+Test de normalité (Shapiro-Wilk) : Statistique = 0.8460, p-value = 2.1955e-54
+Conclusion : La distribution est Non normale.
+
+ANALYSE DE LA VARIABLE : AGEENFANT
+----------------------------------------
+Tendance centrale : Moyenne = 28.25 | Médiane = 28.00 | Mode = 3
+Dispersion : Écart-type = 17.23 | Variance = 297.04 | IQR = 30.00 [Min: 0, Max: 59]
+Forme de la distribution : Skewness = 0.07 | Kurtosis = -1.22
+Test de normalité (Shapiro-Wilk) : Statistique = 0.9510, p-value = 4.1993e-36
+Conclusion : La distribution est Non normale.
+
