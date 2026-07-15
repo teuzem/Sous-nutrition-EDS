@@ -361,29 +361,12 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-
-# ERREUR DE CHARGEMENT MODÈLE
-if _load_error:
-    st.error(f"""
-    **Impossible de charger les artefacts du modèle CatBoost.**
-
-    Vérifiez que le répertoire `{MODEL_DIR}/` contient bien :
-    - `modele_catboost_sous_nutrition_eds2018.joblib`
-    - `column_transformer_api.joblib`
-    - `co_variables_inference.joblib`
-    - `taux_conditionnels_cliniques.joblib`
-
-    Erreur technique : `{_load_error}`
-    """)
-    st.stop()
-
 # 9. ONGLETS PRINCIPAUX
 tab1, tab2, tab3 = st.tabs([
     "Prédiction Individuelle",
     "Prédiction en Masse",
     "Historique de Session",
 ])
-
 
 
 # TAB 1 — PRÉDICTION INDIVIDUELLE
