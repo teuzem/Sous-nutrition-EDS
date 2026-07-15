@@ -16,7 +16,6 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 # 0. CONFIGURATION PATHS — identiques à gradioapp.py
-MODEL_DIR  = "modeles_sauvegardes"
 OUTPUT_DIR = "resultats"
 
 _FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -37,10 +36,10 @@ st.set_page_config(
 @st.cache_resource(show_spinner=False)
 def load_resources():
     try:
-        model       = joblib.load(os.path.join(MODEL_DIR, "modele_catboost_sous_nutrition_eds2018.joblib"))
-        preprocessor = joblib.load(os.path.join(MODEL_DIR, "column_transformer_api.joblib"))
-        features    = joblib.load(os.path.join(MODEL_DIR, "co_variables_inference.joblib"))
-        taux        = joblib.load(os.path.join(MODEL_DIR, "taux_conditionnels_cliniques.joblib"))
+        model       = joblib.load(os.path.join("modele_catboost_sous_nutrition_eds2018.joblib"))
+        preprocessor = joblib.load(os.path.join("column_transformer_api.joblib"))
+        features    = joblib.load(os.path.join("co_variables_inference.joblib"))
+        taux        = joblib.load(os.path.join("taux_conditionnels_cliniques.joblib"))
         return model, preprocessor, features, taux, None
     except Exception as e:
         return None, None, None, None, str(e)
