@@ -16,7 +16,10 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 # 0. CONFIGURATION PATHS — identiques à gradioapp.py
-OUTPUT_DIR = "resultats"
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "modeles_sauvegardes"
+OUTPUT_DIR = BASE_DIR / "resultats"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 _FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#006D77"/>
@@ -33,18 +36,55 @@ st.set_page_config(
 )
 
 # 1. CHARGEMENT DES ARTEFACTS CATBOOST (même logique que gradioapp.py)
+def _resolve_artifact(*relative_candidates: str) -> Path:
+    """Retourne le premier artefact trouvé parmi plusieurs chemins candidats."""
+    essais = []
+    for candidate in relative_candidates:
+        candidate_path = Path(candidate)
+        path = candidate_path if candidate_path.is_absolute() else BASE_DIR / candidate_path
+        essais.append(str(path))
+        if path.exists():
+            return path
+    raise FileNotFoundError(
+        "Artefact introuvable. Chemins testés : " + " | ".join(essais)
+    )
+
+
 @st.cache_resource(show_spinner=False)
 def load_resources():
     try:
-        model       = joblib.load(os.path.join("modele_catboost_sous_nutrition_eds2018.joblib"))
-        preprocessor = joblib.load(os.path.join("column_transformer_api.joblib"))
-        features    = joblib.load(os.path.join("co_variables_inference.joblib"))
-        taux        = joblib.load(os.path.join("taux_conditionnels_cliniques.joblib"))
+        model_path = _resolve_artifact(
+            "modeles_sauvegardes/modele_catboost_sous_nutrition_eds2018.joblib",
+            "modeles_sauvegardes/modele_catboost_sous_nutrition_eds.joblib",
+            "modele_catboost_sous_nutrition_eds.joblib",
+        )
+        preprocessor_path = _resolve_artifact(
+            "modeles_sauvegardes/column_transformer_api.joblib",
+            "column_transformer_api.joblib",
+        )
+        features_path = _resolve_artifact(
+            "modeles_sauvegardes/co_variables_inference.joblib",
+            "co_variables_inference.joblib",
+        )
+        taux_path = _resolve_artifact(
+            "modeles_sauvegardes/taux_conditionnels_cliniques.joblib",
+            "taux_conditionnels_cliniques.joblib",
+        )
+
+        model = joblib.load(model_path)
+        preprocessor = joblib.load(preprocessor_path)
+        features = joblib.load(features_path)
+        taux = joblib.load(taux_path)
         return model, preprocessor, features, taux, None
     except Exception as e:
         return None, None, None, None, str(e)
 
+
 meilleur_modele, preprocessor, ordre_exact_features, taux_conditionnels, _load_error = load_resources()
+
+if _load_error:
+    st.error(f"Erreur de chargement des artefacts du modèle : {_load_error}")
+    st.stop()
 
 
 # 2. DICTIONNAIRES D'ENCODAGE — identiques à gradioapp.py
@@ -99,6 +139,12 @@ REGION_COORDS   = {
 # 3. PIPELINE D'INFÉRENCE — identique à gradioapp.py
 def executer_inference_pipeline(df_input: pd.DataFrame) -> np.ndarray:
     """Feature engineering + transformation + prédiction CatBoost."""
+    if ordre_exact_features is None or preprocessor is None or meilleur_modele is None:
+        raise RuntimeError(
+            "Les artefacts du pipeline ne sont pas chargés correctement. "
+            f"Détail : {_load_error}"
+        )
+
     df = df_input.copy()
     df['ageenfant_carre']          = df['ageenfant'] ** 2
     df['eau_amelioree']            = df['sourceeaupotable'].isin([11, 12, 13, 21]).astype(int)
@@ -107,7 +153,15 @@ def executer_inference_pipeline(df_input: pd.DataFrame) -> np.ndarray:
     df['pauvreté_rurale']          = ((df['milieuderesidence'] == 2) & (df['indicederichesse'].isin([1, 2]))).astype(int)
     df['ratio_charge_menage']      = df['nombreenfantsnesvivants'] / (df['nombremembresmenage'].replace(0, np.nan))
     df['ratio_charge_menage']      = df['ratio_charge_menage'].fillna(3.0)
-    df_aligned    = df[ordre_exact_features].copy()
+
+    features_attendues = list(ordre_exact_features)
+    colonnes_manquantes = [col for col in features_attendues if col not in df.columns]
+    if colonnes_manquantes:
+        raise ValueError(
+            "Colonnes manquantes pour l'inférence : " + ", ".join(colonnes_manquantes)
+        )
+
+    df_aligned = df.loc[:, features_attendues].copy()
     X_transformed = preprocessor.transform(df_aligned)
     return meilleur_modele.predict_proba(X_transformed)[:, 1]
 
