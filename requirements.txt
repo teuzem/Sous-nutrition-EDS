@@ -10,3 +10,4 @@ streamlit-folium
 fpdf2
 matplotlib
 seaborn
+catboost
